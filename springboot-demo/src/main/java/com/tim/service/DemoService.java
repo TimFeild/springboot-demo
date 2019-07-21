@@ -6,13 +6,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
-import java.sql.SQLException;
-
 @Service
 public class DemoService {
     @Autowired
     private DemoDao dao;
-
     @Transactional
     public void delete() {
         try {
