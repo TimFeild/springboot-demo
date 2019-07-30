@@ -3,7 +3,7 @@
 
 <mapper namespace="com.tim.dao.primary.DemoDao">
     <select id="select" resultType="java.util.Map">
-        select name,en_name from emp
+        select id,en_name from emp
     </select>
 
     <delete id="delete">

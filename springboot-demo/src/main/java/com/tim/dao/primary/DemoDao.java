@@ -7,7 +7,7 @@ import java.util.Map;
 
 @Repository
 public interface DemoDao {
-    List<Map<String,String>> select();
+    List<Map<String,Object>> select();
 
     void delete();
 

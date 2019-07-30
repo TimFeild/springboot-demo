@@ -25,12 +25,9 @@ public class DemoController {
     private DemoService service;
 
     @GetMapping("/select/{source}")
-    public List<Map<String, String>> select(@PathVariable(name = "source") String source) {
-        if ("mysql".equals(source)) {
+    public List<Map<String, Object>> select(@PathVariable(name = "source") String source) {
+
             return dao.select();
-        } else {
-            return odao.select();
-        }
     }
 
     @DeleteMapping("/delete")
