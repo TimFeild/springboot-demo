@@ -1,6 +1,7 @@
 package com.tim;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import net.javacrumbs.shedlock.spring.annotation.EnableSchedulerLock;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -10,6 +11,7 @@ import javax.sql.DataSource;
 
 @SpringBootApplication
 @EnableScheduling
+@EnableSchedulerLock(defaultLockAtMostFor = "PT30S")
 public class SpringbootDemoApplication {
 
     public static void main(String[] args) {
